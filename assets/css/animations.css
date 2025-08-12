@@ -1,0 +1,341 @@
+/* ===== KEYFRAMES Y ANIMACIONES ===== */
+
+/* Animación de pulso para el logo */
+@keyframes pulse {
+    0% { 
+        transform: scale(1); 
+        box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7);
+    }
+    50% { 
+        transform: scale(1.05); 
+        box-shadow: 0 0 0 10px rgba(102, 126, 234, 0);
+    }
+    100% { 
+        transform: scale(1); 
+        box-shadow: 0 0 0 0 rgba(102, 126, 234, 0);
+    }
+}
+
+/* Animación de aparición desde abajo */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación de aparición desde la izquierda */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animación de aparición desde la derecha */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animación de escalado suave */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Animación de rotación suave */
+@keyframes rotateIn {
+    from {
+        opacity: 0;
+        transform: rotate(-10deg) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+/* Animación de rebote */
+@keyframes bounce {
+    0%, 20%, 53%, 80%, 100% {
+        transform: translate3d(0, 0, 0);
+    }
+    40%, 43% {
+        transform: translate3d(0, -15px, 0);
+    }
+    70% {
+        transform: translate3d(0, -8px, 0);
+    }
+    90% {
+        transform: translate3d(0, -3px, 0);
+    }
+}
+
+/* Animación de ondulación */
+@keyframes ripple {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* Animación de parpadeo suave */
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0.5; }
+}
+
+/* Animación de deslizamiento hacia abajo */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación de balanceo */
+@keyframes swing {
+    20% { transform: rotate3d(0, 0, 1, 15deg); }
+    40% { transform: rotate3d(0, 0, 1, -10deg); }
+    60% { transform: rotate3d(0, 0, 1, 5deg); }
+    80% { transform: rotate3d(0, 0, 1, -5deg); }
+    100% { transform: rotate3d(0, 0, 1, 0deg); }
+}
+
+/* ===== APLICACIÓN DE ANIMACIONES ===== */
+
+/* Logo con animación de pulso */
+.logo-icon {
+    animation: pulse 2s infinite;
+}
+
+/* Contenido de secciones con entrada suave */
+.section-content {
+    animation: fadeInUp 0.6s ease;
+}
+
+/* Cards con animación escalonada */
+.card {
+    animation: scaleIn 0.5s ease;
+    animation-fill-mode: both;
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Categorías de servicios con entrada desde los lados */
+.service-category:nth-child(odd) {
+    animation: fadeInLeft 0.6s ease;
+}
+
+.service-category:nth-child(even) {
+    animation: fadeInRight 0.6s ease;
+}
+
+/* Tags tecnológicos con animación de aparición */
+.tech-tag {
+    animation: scaleIn 0.4s ease;
+    animation-fill-mode: both;
+}
+
+/* Retraso escalonado para los tags */
+.tech-tag:nth-child(1) { animation-delay: 0.05s; }
+.tech-tag:nth-child(2) { animation-delay: 0.1s; }
+.tech-tag:nth-child(3) { animation-delay: 0.15s; }
+.tech-tag:nth-child(4) { animation-delay: 0.2s; }
+.tech-tag:nth-child(5) { animation-delay: 0.25s; }
+.tech-tag:nth-child(6) { animation-delay: 0.3s; }
+.tech-tag:nth-child(7) { animation-delay: 0.35s; }
+.tech-tag:nth-child(8) { animation-delay: 0.4s; }
+
+/* Estadísticas con animación de rebote */
+.stat {
+    animation: bounce 1s ease;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+}
+
+.stat:nth-child(2) { animation-delay: 0.7s; }
+.stat:nth-child(3) { animation-delay: 0.9s; }
+.stat:nth-child(4) { animation-delay: 1.1s; }
+
+/* Mensaje de éxito con entrada suave */
+.success-message {
+    animation: fadeInUp 0.5s ease;
+}
+
+/* Navegación móvil con deslizamiento */
+.nav-links.active {
+    animation: slideDown 0.3s ease;
+}
+
+/* ===== EFECTOS HOVER AVANZADOS ===== */
+
+/* Efecto de elevación para cards */
+.card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Efecto de ondulación en botones */
+.cta-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: width 0.6s, height 0.6s;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.cta-button:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Efecto de brillo en tech-tags */
+.tech-tag {
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-tag::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -100%;
+    width: 100%;
+    height: calc(100% + 4px);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.5s ease;
+}
+
+.tech-tag:hover::after {
+    left: 100%;
+}
+
+/* ===== ANIMACIONES DE SCROLL ===== */
+
+/* Animación para elementos que aparecen al hacer scroll */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
+}
+
+.scroll-animate.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== LOADING SPINNER ===== */
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(102, 126, 234, 0.1);
+    border-left: 4px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ===== ANIMACIONES DE TRANSICIÓN ENTRE SECCIONES ===== */
+.section-transition {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-transition.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ===== EFECTOS DE FONDO ANIMADO ===== */
+.animated-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    animation: backgroundShimmer 3s ease infinite;
+}
+
+@keyframes backgroundShimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* ===== ANIMACIONES PARA FORMULARIOS ===== */
+.form-group input:focus,
+.form-group textarea:focus {
+    animation: inputFocus 0.3s ease;
+}
+
+@keyframes inputFocus {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+/* ===== CONTROL DE ANIMACIONES SEGÚN PREFERENCIAS ===== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

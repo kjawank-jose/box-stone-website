@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Stone - Transformando Ideas</title>
+    <meta name="description" content="Box Stone - Empresa de desarrollo de software y diseño web. Transformamos ideas en soluciones tecnológicas innovadoras.">
+    <meta name="keywords" content="desarrollo software, diseño web, programación, tecnología, Box Stone">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="assets/images/logo.png" alt="Box Stone Logo" id="logoImage" style="display: none;">
+                    <span id="logoText">BS</span>
+                </div>
+                <span>Box Stone</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a onclick="showSection('home')" class="nav-link">Inicio</a></li>
+                <li><a onclick="showSection('about')" class="nav-link">Nosotros</a></li>
+                <li><a onclick="showSection('services')" class="nav-link">Servicios</a></li>
+                <li><a onclick="showSection('contact')" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="mobile-menu" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Sección Inicio -->
+        <section class="section active" id="home">
+            <div class="hero">
+                <div class="container">
+                    <h1>Box Stone</h1>
+                    <p>"Transformando Ideas"</p>
+                    <a href="#" class="cta-button" onclick="showSection('about')">Conoce Más</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Nosotros -->
+        <section class="section" id="about">
+            <div class="container">
+                <div class="section-content">
+                    <h2>Sobre Nosotros</h2>
+                    
+                    <div class="grid">
+                        <div class="card">
+                            <h3>🎯 Nuestra Misión</h3>
+                            <p>Transformar ideas innovadoras en soluciones tecnológicas de vanguardia, proporcionando desarrollo de software y diseño web de alta calidad que impulse el crecimiento y éxito de nuestros clientes.</p>
+                        </div>
+                        <div class="card">
+                            <h3>👁️ Nuestra Visión</h3>
+                            <p>Ser la empresa líder en desarrollo tecnológico, reconocida por nuestra excelencia, innovación y capacidad para convertir conceptos complejos en soluciones digitales accesibles y efectivas.</p>
+                        </div>
+                        <div class="card">
+                            <h3>🚀 Nuestro Objetivo</h3>
+                            <p>Ofrecer servicios tecnológicos integrales que superen las expectativas de nuestros clientes, utilizando las últimas tecnologías y metodologías para crear productos digitales robustos, escalables y orientados al usuario.</p>
+                        </div>
+                    </div>
+
+                    <div class="card" style="margin-top: 3rem;">
+                        <h3>📖 Nuestra Historia</h3>
+                        <p>Box Stone nació de la visión de un equipo de desarrolladores apasionados por la tecnología y la innovación. Desde nuestros inicios, hemos estado comprometidos con la transformación digital, ayudando a empresas y emprendedores a materializar sus ideas más ambiciosas.</p>
+                        <br>
+                        <p>Nuestra trayectoria comenzó con proyectos pequeños pero significativos, donde aprendimos la importancia de entender profundamente las necesidades de cada cliente. Con el tiempo, hemos expandido nuestras capacidades técnicas y nuestro portafolio de servicios, manteniéndonos siempre a la vanguardia de las tecnologías emergentes.</p>
+                        <br>
+                        <p>Hoy, Box Stone es sinónimo de calidad, innovación y confiabilidad en el desarrollo de software y diseño web, con un equipo multidisciplinario capaz de abordar proyectos de cualquier escala y complejidad.</p>
+                    </div>
+
+                    <div class="company-stats">
+                        <div class="stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Proyectos Completados</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">25+</span>
+                            <span class="stat-label">Tecnologías Dominadas</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">99%</span>
+                            <span class="stat-label">Satisfacción del Cliente</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Soporte Técnico</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Servicios -->
+        <section class="section" id="services">
+            <div class="container">
+                <div class="section-content">
+                    <h2>Nuestros Servicios</h2>
+                    
+                    <div class="service-category">
+                        <h3>💻 Desarrollo de Software</h3>
+                        <p>Creamos aplicaciones robustas y escalables utilizando lenguajes de propósito general.</p>
+                        <div class="tech-list">
+                            <span class="tech-tag">C</span>
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Go</span>
+                            <span class="tech-tag">Rust</span>
+                            <span class="tech-tag">Swift</span>
+                            <span class="tech-tag">Kotlin</span>
+                            <span class="tech-tag">Ruby</span>
+                            <span class="tech-tag">Perl</span>
+                            <span class="tech-tag">Pascal/Delphi</span>
+                            <span class="tech-tag">D</span>
+                            <span class="tech-tag">Zig</span>
+                            <span class="tech-tag">Nim</span>
+                        </div>
+                    </div>
+
+                    <div class="service-category">
+                        <h3>🌐 Desarrollo Web</h3>
+                        <p>Diseñamos y desarrollamos sitios web modernos, responsivos y optimizados.</p>
+                        <div class="tech-list">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">Dart (Flutter Web)</span>
+                            <span class="tech-tag">CoffeeScript</span>
+                            <span class="tech-tag">Elm</span>
+                            <span class="tech-tag">Svelte</span>
+                            <span class="tech-tag">Haxe</span>
+                        </div>
+                    </div>
+
+                    <div class="service-category">
+                        <h3>📱 Desarrollo Móvil</h3>
+                        <p>Aplicaciones móviles nativas e híbridas para iOS y Android.</p>
+                        <div class="tech-list">
+                            <span class="tech-tag">Swift (iOS)</span>
+                            <span class="tech-tag">Kotlin (Android)</span>
+                            <span class="tech-tag">Java (Android)</span>
+                            <span class="tech-tag">Dart (Flutter)</span>
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">C# + Xamarin/MAUI</span>
+                        </div>
+                    </div>
+
+                    <div class="service-category">
+                        <h3>🤖 Ciencia de Datos e IA</h3>
+                        <p>Soluciones inteligentes con análisis de datos y machine learning.</p>
+                        <div class="tech-list">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">R</span>
+                            <span class="tech-tag">Julia</span>
+                            <span class="tech-tag">MATLAB</span>
+                            <span class="tech-tag">SAS</span>
+                            <span class="tech-tag">Octave</span>
+                        </div>
+                    </div>
+
+                    <div class="service-category">
+                        <h3>🎮 Desarrollo de Videojuegos</h3>
+                        <p>Creación de experiencias de juego inmersivas y entretenidas.</p>
+                        <div class="tech-list">
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">GDScript</span>
+                            <span class="tech-tag">Lua</span>
+                            <span class="tech-tag">Haxe</span>
+                        </div>
+                    </div>
+
+                    <div class="service-category">
+                        <h3>⚡ Sistemas Embebidos y Hardware</h3>
+                        <p>Programación de bajo nivel y sistemas especializados.</p>
+                        <div class="tech-list">
+                            <span class="tech-tag">C</span>
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">Assembly</span>
+                            <span class="tech-tag">Ada</span>
+                            <span class="tech-tag">Verilog/VHDL</span>
+                            <span class="tech-tag">Forth</span>
+                        </div>
+                    </div>
+
+                    <div class="service-category">
+                        <h3>🔧 Programación Funcional</h3>
+                        <p>Desarrollo con paradigmas funcionales avanzados.</p>
+                        <div class="tech-list">
+                            <span class="tech-tag">Haskell</span>
+                            <span class="tech-tag">Elixir</span>
+                            <span class="tech-tag">Erlang</span>
+                            <span class="tech-tag">OCaml</span>
+                            <span class="tech-tag">F#</span>
+                            <span class="tech-tag">Scala</span>
+                        </div>
+                    </div>
+
+                    <div class="service-category">
+                        <h3>🏛️ Lenguajes Clásicos</h3>
+                        <p>Mantenimiento y modernización de sistemas legacy.</p>
+                        <div class="tech-list">
+                            <span class="tech-tag">COBOL</span>
+                            <span class="tech-tag">Fortran</span>
+                            <span class="tech-tag">Lisp/Scheme</span>
+                            <span class="tech-tag">BASIC/VB</span>
+                            <span class="tech-tag">Smalltalk</span>
+                            <span class="tech-tag">Prolog</span>
+                        </div>
+                    </div>
+
+                    <div class="service-category">
+                        <h3>🗄️ Bases de Datos</h3>
+                        <p>Diseño, implementación y optimización de sistemas de datos.</p>
+                        <div class="tech-list">
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">SQLite</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Insomnia</span>
+                            <span class="tech-tag">Postman</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section class="section" id="contact">
+            <div class="container">
+                <div class="section-content">
+                    <h2>Contáctanos</h2>
+                    <p style="text-align: center; margin-bottom: 3rem; color: #666; font-size: 1.1rem;">
+                        ¿Tienes un proyecto en mente? Nos encantaría escuchar tus ideas y ayudarte a transformarlas en realidad.
+                    </p>
+                    
+                    <div id="successMessage" class="success-message">
+                        ¡Mensaje enviado exitosamente! Nos pondremos en contacto contigo pronto.
+                    </div>
+
+                    <form id="contactForm" onsubmit="handleSubmit(event)">
+                        <div class="grid">
+                            <div class="form-group">
+                                <label for="fullName">Nombre Completo *</label>
+                                <input type="text" id="fullName" name="fullName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo Electrónico *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Teléfono</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Descripción del Requerimiento *</label>
+                            <textarea id="description" name="description" placeholder="Cuéntanos sobre tu proyecto, necesidades específicas, tecnologías preferidas, plazos estimados, etc." required></textarea>
+                        </div>
+                        <div style="text-align: center;">
+                            <button type="submit" class="cta-button">Enviar Mensaje</button>
+                        </div>
+                    </form>
+
+                    <div style="margin-top: 3rem; text-align: center; color: #666;">
+                        <p><strong>📧 Email:</strong> contacto@boxstone.com</p>
+                        <p><strong>📱 Teléfono:</strong> +51 999 123 456</p>
+                        <p><strong>📍 Ubicación:</strong> Lima, Perú</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts JavaScript -->
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/contact-form.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
